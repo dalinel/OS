@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
 int sock=0;
 int i = 0;
-char Buffer[20];
+char Buffer[100];
 struct sockaddr_in adr;
 int interpreteur=0;
 
