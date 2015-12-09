@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1448620203 source:/home/dalin/Documents/C/Talk/main.c
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<errno.h>
+	<netinet/in.h>
+	<netdb.h>
+	<signal.h>
+

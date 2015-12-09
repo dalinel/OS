@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1449247361 source:/home/dalin/Documents/C/projetClientServeurTGA/main.c
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<string.h>
+	<dirent.h>
+	<stdio.h>
+	<sys/stat.h>
+	"main.h"
+	<stdlib.h>
+	<stddef.h>
+
+1449247473 /home/dalin/Documents/C/projetClientServeurTGA/main.h
+	<stdint.h>
+
