@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1449843888 source:/home/dalin/Documents/C/Vigenere/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+
+1449843894 /home/dalin/Documents/C/Vigenere/main.h
+	<stdint.h>
+
