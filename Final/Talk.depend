@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1449852232 source:/home/dalin/Documents/C/Talk/main.c
+	"main.h"
+
+1449846293 source:/home/dalin/Documents/C/Talk/EncrypterDecrypter.c
+	"EncrypterDecrypter.h"
+
+1449846449 /home/dalin/Documents/C/Talk/fonctions.h
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1449848703 source:/home/dalin/Documents/C/Talk/ListeImages.c
+	"ListeImages.h"
+
+1449846654 /home/dalin/Documents/C/Talk/EncrypterDecrypter.h
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1449846177 source:/home/dalin/Documents/C/Talk/fonctions.c
+	"fonctions.h"
+
+1449848057 /home/dalin/Documents/C/Talk/ListeImages.h
+	<stdint.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<string.h>
+	<dirent.h>
+	<stdio.h>
+	<sys/stat.h>
+	<stdlib.h>
+	<stddef.h>
+
+1449848872 /home/dalin/Documents/C/Talk/main.h
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<string.h>
+	<errno.h>
+	<netinet/in.h>
+	<netdb.h>
+	<signal.h>
+
