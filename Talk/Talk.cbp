@@ -31,9 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="EncrypterDecrypter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="EncrypterDecrypter.h" />
+		<Unit filename="ListeImages.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ListeImages.h" />
+		<Unit filename="fonctions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fonctions.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="main.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

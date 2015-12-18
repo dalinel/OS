@@ -1,14 +1,4 @@
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <stdio.h>
-#include <stdlib.h> /* pour exit */
-#include <strings.h> /* pour bcopy */
-#include <string.h>
-#include <errno.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#include <signal.h>
+#include "main.h"
 
 int main(int argc, char *argv[]){
 
@@ -16,7 +6,7 @@ struct sockaddr_in addr;
 int socket_RV,socket_service;
 int i=0;
 char nom[30];
-char Buffer[20];
+char Buffer[100];
 nom[29]='\0';
 
 int interpreteur=0;
@@ -51,11 +41,12 @@ if (listen(socket_RV,1)==-1)
     }
 socklen_t * size=malloc(sizeof(socklen_t));
 socket_service=accept(socket_RV,(struct sockaddr *) &addr, size);
+liste * l=nouvelleListe();
 while(interpreteur==0){
-	
+
 	if(i==0)
-	    {	
-	    	
+	    {
+
 	        if(recv(socket_service,Buffer,sizeof(Buffer),0)<= 0)
 	        {
 	            perror("receive");
@@ -63,19 +54,47 @@ while(interpreteur==0){
 	        }
 	        else
 	        {
-	            printf("%s",Buffer);
+	            printf("%s\n",Buffer);
+
+	            if(strncmp(Buffer,"liste",strlen("liste"))==0){
+                    *l =listeFichier(".");
+
+
+                }
 
 	            if(strncmp(Buffer,"exit",4)==0){
 	            	puts("Serveur down");
 	            	interpreteur=-1;
 	            }
-	           
+	             if(strncmp(Buffer,"vigenere",strlen("vigenere"))==0){
+
+                    if(l->length==0){
+                        puts("Veuillez executer la fonction liste");
+                    }
+                    else{
+                        char * reponse = cherche(Buffer,*l);
+                        if(strncmp(reponse,"Erreur de nom",strlen("Erreur de nom"))==0){
+                            puts("Veuillez entrer un nom valide");
+
+                        }
+                        else{
+                            puts("Reponse");
+                            printf("%s",reponse);
+                            puts("Encryptage Vigenère...");
+
+                            vigenere(reponse);
+                            puts("Image encryptée...");
+                        }
+                    }
+                }
+
 	        }
-	       
+
 	    }
-	  
+
 }
 close(socket_RV);
 return 0;
+
 }
 

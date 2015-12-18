@@ -63,7 +63,7 @@ while(interpreteur==0){
 	        }
 	        else
 	        {
-	            printf(Buffer);
+	            printf("%s",Buffer);
 
 	            if(strncmp(Buffer,"exit",4)==0){
 	            	puts("Serveur down");
